@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityFix — Login</title>
+  <style>
+    :root {
+      --accent:#0ea5a6;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; background:var(--bg); color:#0f172a; line-height:1.5;
+    }
+    .wrap { max-width:500px; margin:0 auto; padding:20px; }
+    header {
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo {
+      width:48px; height:48px; border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#065f46);
+      display:flex; align-items:center; justify-content:center;
+      color:white; font-weight:700;
+    }
+    nav a {
+      margin-left:15px; color:var(--muted);
+      text-decoration:none; font-weight:600;
+    }
+    nav a:hover { color:var(--accent); }
+    .login-box {
+      margin-top:60px; padding:30px;
+      background:var(--card); border-radius:var(--radius);
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+    h1 { margin:0 0 20px; text-align:center; }
+    label { display:block; margin-top:12px; font-weight:600; }
+    input {
+      width:100%; padding:10px; margin-top:6px;
+      border-radius:var(--radius); border:1px solid #e5e7eb;
+    }
+    .btn {
+      display:block; width:100%; margin-top:20px;
+      padding:12px; border-radius:var(--radius);
+      background:var(--accent); color:white; font-weight:700;
+      text-decoration:none; text-align:center;
+      border:none; cursor:pointer;
+    }
+    footer {
+      margin-top:40px; padding:20px; text-align:center;
+      color:var(--muted); font-size:0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">CF</div>
+        <div>
+          <div style="font-weight:800">CityFix</div>
+          <div style="font-size:0.9rem;color:var(--muted)">Civic issue reporting platform</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="main.html">Report</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <div class="login-box">
+      <h1>Login</h1>
+      <form onsubmit="event.preventDefault(); alert('Login successful (simulated)'); window.location.href='main.html';">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> CityFix — Civic Issue Reporting
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
