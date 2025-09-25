@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityFix — Civic Issue Reporting</title>
+  <style>
+    :root {
+      --accent:#0ea5a6;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:12px;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; background:var(--bg); color:#0f172a; line-height:1.5;
+    }
+    .wrap { max-width:1100px; margin:0 auto; padding:20px; }
+    header {
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo {
+      width:48px; height:48px; border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#065f46);
+      display:flex; align-items:center; justify-content:center;
+      color:white; font-weight:700;
+    }
+    nav a {
+      margin-left:15px; color:var(--muted);
+      text-decoration:none; font-weight:600;
+    }
+    nav a:hover { color:var(--accent); }
+    .hero {
+      margin-top:40px; text-align:center;
+    }
+    h1 { font-size:2rem; margin:0 0 10px; }
+    p.lead { font-size:1.1rem; color:var(--muted); }
+    .btn {
+      display:inline-block; margin-top:20px; padding:12px 18px;
+      border-radius:var(--radius); background:var(--accent);
+      color:white; font-weight:700; text-decoration:none;
+    }
+    footer {
+      margin-top:60px; padding:20px; text-align:center;
+      color:var(--muted); font-size:0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">CF</div>
+        <div>
+          <div style="font-weight:800">CityFix</div>
+          <div style="font-size:0.9rem;color:var(--muted)">Civic issue reporting platform</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="main.html">Report</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Welcome to CityFix</h1>
+      <p class="lead">
+        A mobile-first platform that empowers citizens to report civic issues 
+        and helps municipalities respond faster.
+      </p>
+      <a class="btn" href="login.html">Get Started</a>
+    </section>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> CityFix — Civic Issue Reporting
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
